@@ -7,4 +7,5 @@ setup(name='holoinfer',
       author='ralex0',
       author_email='ralex0@users.noreply.github.com',
       license='MIT',
-      packages=['holoinfer'])
+      packages=['holoinfer'],
+      requires=['numpy, scipy, matplotlib'])
