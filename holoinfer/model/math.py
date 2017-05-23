@@ -1,4 +1,5 @@
 import numpy as np
+from scipy.stats import norm
 
 
 def dist(*vec):
@@ -25,3 +26,7 @@ def cartesian(*axes):
     """
     return np.array(np.meshgrid(*axes, indexing='ij')).T.reshape(-1, len(axes))
 
+
+def add_noise(signal, sc=.1, *args, **kwargs):
+    # Wrapper to add Gaussian noise to array
+    return signal + norm.rvs(size=signal.shape, scale=signal.std() * sc, *args, **kwargs)
