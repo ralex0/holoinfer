@@ -13,7 +13,7 @@ def rayleigh_gans_sphere_holo(position, k, center, m, a):
 
     x = k * a
     u = 2 * x * np.sin(.5 * theta)
-    g = 3 / u ** 3 * (np.sin(u) - u * np.cos(u))
+    G = 3 / u ** 3 * (np.sin(u) - u * np.cos(u))
 
     re_m, im_m = m[0], m[1]
 
