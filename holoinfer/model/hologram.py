@@ -9,9 +9,11 @@ def rayleigh_gans_sphere_holo(position, k, center, m, a):
     z = center[2]
     theta = np.arccos(z / r)
 
+    V = 4 / 3 * np.pi * a ** 3
+
     x = k * a
     u = 2 * x * np.sin(.5 * theta)
-    g = 3 / u ** 3 * (np.sin(u) - u * np.cos(u))
+    G = 3 / u ** 3 * (np.sin(u) - u * np.cos(u))
 
     re_m, im_m = m[0], m[1]
 
