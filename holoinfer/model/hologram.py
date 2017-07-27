@@ -24,4 +24,3 @@ def rayleigh_gans_sphere_holo(position, k, center, m, a):
     holo_full = holo_scatt + holo_inter + 1
 
     return holo_full
-
